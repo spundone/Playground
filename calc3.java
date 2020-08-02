@@ -1,4 +1,4 @@
-import java.util.Scanner;               //MADLAD Edition
+import java.util.Scanner;               //MADLAD Edition FUNCTION Overloaded
 public class calc3 {
     static double calc(double a)
     {
