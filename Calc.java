@@ -10,7 +10,7 @@ public class Calc
         double first = sc.nextDouble();
         double second = sc.nextDouble();
 
-        System.out.print("Enter an operator (+, -, *, /): ");
+        System.out.print("Enter an operator (+, -, *, /,%): ");
         char op = sc.next().charAt(0);
         sc.close();
         double result;
@@ -32,7 +32,9 @@ public class Calc
             case '/':
                 result = first / second;
                 break;
-
+            case '%':
+                result = first % second;
+                break;
             // op doesn't match any case constant (+, -, *, /)
             default:
                 System.out.println("Error! op is not correct");
