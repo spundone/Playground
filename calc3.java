@@ -80,6 +80,7 @@ public class calc3 {
             break;
             default:
             System.out.println("Error enter correct operator");
+            s.close();
             return;
         }
         s.close();
