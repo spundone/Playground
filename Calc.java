@@ -35,7 +35,7 @@ public class Calc
             case '%':
                 result = first % second;
                 break;
-            // op doesn't match any case constant (+, -, *, /)
+            // op doesn't match any case constant (+, -, *, /, %)
             default:
                 System.out.println("Error! op is not correct");
                 return;
