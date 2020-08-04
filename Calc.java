@@ -55,7 +55,10 @@ public class Calc
                     second = sc.nextDouble();
                 }
             else 
+            {
                 flag ++;
+                sc.close();
+            }
         }while(flag == 0);
     }
 }

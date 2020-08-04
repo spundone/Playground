@@ -39,8 +39,11 @@ public class calc3 {
     } 
     public static void main(String[] args)
     {
+        //int flag = 0;
+        //char loption;
         calc3 cx = new calc3();
         Scanner s = new Scanner(System.in);
+        //do{
         System.out.println("Welcome to Calc3 🤣");
         System.out.println("Choose Your Option");
         System.out.println("1. To Add Numbers");
@@ -84,6 +87,20 @@ public class calc3 {
             s.close();
             return;
         }
+       /* System.out.println("do you want to operate again on the result?(Y/N)");
+            loption = s.next().charAt(0);
+            if (loption == 'Y' || loption == 'y')
+                {
+                    result = first;
+                    System.out.println("Enter Number:");
+                    second = s.nextDouble();
+                }
+            else 
+            {
+                flag ++;
+                s.close();
+            }
+        }while(flag == 0);*/
         s.close();
     }
 }

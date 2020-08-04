@@ -33,14 +33,18 @@ public class calc2 {
 
     public static void main(String[] args) {
         double a, b, res;
+        int flag = 0;
+        char loption;
         Scanner s = new Scanner(System.in);
         calc2 cx = new calc2();
         System.out.print("Enter 2 numbers: ");
         a = s.nextDouble();
         b = s.nextDouble();
+        do
+        { 
         System.out.print("Enter an operator (+, -, *, /,%): ");
         char op = s.next().charAt(0);
-        s.close();
+        //s.close();
         switch (op) {
             case '+':
                 res=cx.add(a, b);
@@ -62,6 +66,21 @@ public class calc2 {
             return;
         }
         System.out.println(res);
-        
+        System.out.println("do you want to operate again on the result?(Y/N)");
+        //Scanner sf = new Scanner(System.in);
+        loption = s.next().charAt(0);
+        if (loption == 'Y' || loption == 'y')
+            {
+                res = a;
+                System.out.println("Enter Number:");
+                b = s.nextDouble();
+            }
+        else 
+        {
+            flag ++;
+            s.close();
+            //sf.close();
+        }
+    }while(flag == 0);
     }
 }
