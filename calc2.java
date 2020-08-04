@@ -1,4 +1,4 @@
-import java.util.Scanner;               //Used Static Functions with parameters
+import java.util.Scanner;               //Used Functions with parameters
 
 public class calc2 {
     double add(double a, double b) {
