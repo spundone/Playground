@@ -1,6 +1,6 @@
 import java.util.Scanner;               //MADLAD Edition FUNCTION Overloaded
 public class calc3 {
-    static double calc(double a)
+    double calc(double a)
     {
         System.out.println("Enter Second Number");
         Scanner s = new Scanner(System.in);
@@ -9,7 +9,7 @@ public class calc3 {
         s.close();
         return a+b;
     }
-    static void calc()
+    void calc()
     {
         Scanner s = new Scanner(System.in);
         System.out.println("Enter First Number");
@@ -19,15 +19,15 @@ public class calc3 {
         System.out.println(a +"-"+b+"="+(a-b));
         s.close();
     }
-    static void calc(double a, double b, char c)
+    void calc(double a, double b, char c)
     {
         System.out.println(a +"*"+b+"="+(a*b));
     }
-    static double calc(double a, double b)
+    double calc(double a, double b)
     {
         return a/b;
     }
-    static void calc(char c)
+    void calc(char c)
     {
         Scanner s = new Scanner(System.in);
         System.out.println("Enter First Number");
@@ -39,6 +39,7 @@ public class calc3 {
     } 
     public static void main(String[] args)
     {
+        calc3 cx = new calc3();
         Scanner s = new Scanner(System.in);
         System.out.println("Welcome to Calc3 🤣");
         System.out.println("Choose Your Option");
@@ -54,29 +55,29 @@ public class calc3 {
             case 1:
             System.out.println("Enter First Number");
             double a = s.nextDouble();
-            double res=calc(a);
+            double res=cx.calc(a);
             System.out.print(res);
             break;
             case 2:
-            calc();
+            cx.calc();
             break;
             case 3:
             System.out.println("Enter First Number");
             double am = s.nextDouble();
             System.out.println("Enter Second Number");
             double bm = s.nextDouble();
-            calc(am, bm, 'a');
+            cx.calc(am, bm, 'a');
             break;
             case 4:
             System.out.println("Enter First Number");
             double ad = s.nextDouble();
             System.out.println("Enter Second Number");
             double bd = s.nextDouble();
-            double resd=calc(ad, bd);
+            double resd=cx.calc(ad, bd);
             System.out.println(ad +"/"+ bd +"="+resd);
             break;
             case 5:
-            calc('a');
+            cx.calc('a');
             break;
             default:
             System.out.println("Error enter correct operator");
