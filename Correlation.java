@@ -46,8 +46,8 @@ public class Correlation {
         Double corr = (Double) (n * sum_XY - sum_X * sum_Y)
                 / (Double) (Math.sqrt((n * squareSum_X - sum_X * sum_X) * (n * squareSum_Y - sum_Y * sum_Y)));
         System.out.println("Correlation Coefficient is " +corr);
-        System.out.println("sum of elemnts in x = "+sum_X );
-        System.out.println("sum of elemnts in y = "+sum_Y );
+        System.out.println("sum of elemnts in x = "+sum_X);
+        System.out.println("sum of elemnts in y = "+sum_Y);
         System.out.println("sum of x[i] * y[i] = "+sum_XY);
         System.out.println("sum of square of array elements, square sum X = "+squareSum_X+" square sum Y = "+squareSum_Y);
     }
