@@ -16,7 +16,7 @@ public class Bank {
         System.out.println("Amount Deposited...");
         System.out.println("Balance Amount after Deposit : " + Bank.balance);
         System.out.println(Bank.seperator);
-        sc.close();
+        //sc.close();
     }
 
     static void withdraw() {
@@ -29,7 +29,7 @@ public class Bank {
         System.out.println("Amount Withdrawed...");
         System.out.println("Balance Amount after Withdrawal : " + Bank.balance);
         System.out.println(Bank.seperator);
-        sc.close();
+        //sc.close();
     }
 
     static void computeInterest() {
@@ -65,7 +65,7 @@ public class Bank {
         Bank.deposit();
         System.out.println("Account Created Sucesssfully");
         System.out.println(Bank.seperator);
-        sc.close();
+        //sc.close();
     }
 
     public static void main(final String[] args) {
@@ -110,6 +110,6 @@ public class Bank {
             if (opt == 'Y' || opt == 'y')
                 flag++;
         } while (flag == 0);
-        sc.close();
+        //sc.close();
     }
 }
