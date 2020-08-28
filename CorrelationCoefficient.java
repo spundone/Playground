@@ -1,10 +1,9 @@
 
-class Correlation_coefficient {
+class CorrelationCoefficient {
     public static void main(String args[]) {
         double r, nr = 0, dr_1 = 0, dr_2 = 0, dr_3 = 0, dr = 0;
-        double xx[], xy[], yy[];
+        double xx[], yy[];
         xx = new double[5];
-        xy = new double[5];
         yy = new double[5];
         double x[] = { 60, 61, 62, 63, 65 }, y[] = { 3.1, 3.6, 3.8, 4.0, 4.1 };
         double sum_y = 0, sum_yy = 0, sum_xy = 0, sum_x = 0, sum_xx = 0;
