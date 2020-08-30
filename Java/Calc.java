@@ -1,4 +1,4 @@
-package java;
+package Java;
 
 import java.util.*; //Single Function But Looped
 public class Calc 

@@ -1,4 +1,4 @@
-package java;
+package Java;
 
 class CorrelationCoefficient {
     public static void main(String args[]) {

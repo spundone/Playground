@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - InfixToPostfix",
+            "request": "launch",
+            "mainClass": "Java.InfixToPostfix",
+            "projectName": "Playground_663e0d14"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - InfixToPostfix",
+            "request": "launch",
+            "mainClass": "java.InfixToPostfix",
+            "projectName": "Playground_663e0d14"
+        },
+        {
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
