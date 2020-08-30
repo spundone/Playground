@@ -1,7 +1,8 @@
 import java.util.*;
 
 class InfixToPostfix {
-    // A utility function to return precedence of a given operator, Higher returned value means higher precedence
+    // A utility function to return precedence of a given operator, Higher returned
+    // value means higher precedence
     static int precedence(char ch) {
         if (ch == '+' || ch == '-')
             return 1;
@@ -106,7 +107,7 @@ class InfixToPostfix {
     // Driver method
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        System.out.print("Enter the Actual Infix expression: ");        //No Variables Only Actual Numbers
+        System.out.print("Enter the Actual Infix expression: "); // No Variables Only Actual Numbers
         String inexp = s.nextLine();
         String postexp = (infixToPostfix(inexp));
         System.out.println("The Postfix expression is: " + postexp);
