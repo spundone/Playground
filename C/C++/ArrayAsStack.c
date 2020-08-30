@@ -1,57 +1,62 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-    void push(char element, char stack[], int *top, int stackSize)
+void main()
 {
-    if (*top == -1)
+    int maxsize = 0;
+    int option = 0, top = -1;
+    printf("*********ARRAY IMPLEMENTATION OF STACK*********");
+    printf("\nEnter The Size of the Array : ");
+    scanf("%d", &maxsize);
+    printf("------------------------------------------------");
+    int astack[maxsize];
+    while (option != 4)
     {
-        stack[stackSize - 1] = element;
-        *top = stackSize - 1;
-    }
-    else if (*top == 0)
-    {
-        printf("The stack is already full. \n");
-    }
-    else
-    {
-        stack[(*top) - 1] = element;
-        (*top)--;
-    }
-}
-void pop(char stack[], int *top, int stackSize)
-{
-    if (*top == -1)
-    {
-        printf("The stack is empty. \n");
-    }
-    else
-    {
-        printf("Element popped: %c \n", stack[(*top)]);
-        // If the element popped was the last element in the stack
-        // then set top to -1 to show that the stack is empty
-        if ((*top) == stackSize - 1)
+        printf("\nChoose one of the following options");
+        printf("\n1.Push Element\n2.Pop Element\n3.Show the Stack\n4.Exit");
+        printf("\n------------------------------------------------");
+        printf("\nEnter Your Choice: ");
+        scanf("%d", &option);
+        switch (option)
         {
-            (*top) = -1;
-        }
-        else
-        {
-            (*top)++;
+        case 1:
+            if (top == maxsize - 1)
+                printf("Overflow !! of elements please increase size of Stack");
+            else
+            {
+                printf("Enter Value to be Pushed : ");
+                int val;
+                scanf("%d", &val);
+                top++;
+                astack[top] = val;
+                printf("\nItem Pushed on Top: ");
+                printf("\n------------------------------------------------");
+            }
+            break;
+        case 2:
+            if (top == -1)
+                printf("Underflow !! No Elements Left to Pop");
+            else
+            {
+                top--;
+                printf("Items Popped from Top");
+                printf("\n------------------------------------------------");
+            }
+            break;
+        case 3:
+            printf("\nPrinting Stack Elements......");
+            printf("\nThe Size of the Stack is : %d", maxsize);
+            for (int i = top; i >= 0; i--){
+                printf("\n%d . Element is %d", i, astack[i]);
+            }
+            printf("\n------------------------------------------------");
+            break;
+        case 4:
+            printf("Exiting....");
+            exit(0);
+            break;
+        default:
+            printf("Please Enter a Valid Choice");
         }
     }
-}
-int main()
-{
-    int stackSize = 4;
-    char stack[stackSize];
-    // A negative index shows that the stack is empty
-    int top = -1;
-    push('a', stack, &top, stackSize);
-    printf("Element on top: %c\n", stack[top]);
-    push('b', stack, &top, stackSize);
-    printf("Element on top: %c\n", stack[top]);
-    pop(stack, &top, stackSize);
-    printf("Element on top: %c\n", stack[top]);
-    pop(stack, &top, stackSize);
-    printf("Top: %d\n", top);
-    pop(stack, &top, stackSize);
-    return 0;
 }
