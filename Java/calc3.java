@@ -1,3 +1,5 @@
+package java;
+
 import java.util.Scanner;               //MADLAD Edition FUNCTION Overloaded
 public class calc3 {
     double calc(double a)

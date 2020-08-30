@@ -1,3 +1,5 @@
+package java;
+
 import java.util.Scanner;
 public class Greatest {
     public static void main(String[] args) {

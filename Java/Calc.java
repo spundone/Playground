@@ -1,4 +1,6 @@
-import java.util.*;         //Single Function But Looped
+package java;
+
+import java.util.*; //Single Function But Looped
 public class Calc 
 {
     public static void main(String[] args) 

@@ -1,4 +1,6 @@
-import java.util.Scanner;               //Used Functions with parameters
+package java;
+
+import java.util.Scanner; //Used Functions with parameters
 
 public class calc2 {
     double add(double a, double b) {

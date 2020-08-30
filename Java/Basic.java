@@ -1,4 +1,6 @@
-public class Test 
+package java;
+
+public class Basic
 {
     public static void main(String[] args) //Fuction    (This is a comment)
     {
