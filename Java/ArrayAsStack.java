@@ -43,6 +43,8 @@ class ArrayAsStack {
                 case 3:
                     System.out.println("Printing stack elements .....");
                     System.out.println("The Size of the Stack is: " + maxsize);
+                    if (top == -1)
+                        System.out.println("Empty Stack");
                     for (int i = top; i >= 0; i--) {
                         System.out.println(i + ". Element is " + astack[i]);
                     }

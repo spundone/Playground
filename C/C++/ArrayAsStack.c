@@ -21,7 +21,7 @@ void main()
         {
         case 1:
             if (top == maxsize - 1)
-                printf("Overflow !! of elements please increase size of Stack");
+                printf("Overflow !! of elements please increase size of Stack\n");
             else
             {
                 printf("Enter Value to be Pushed : ");
@@ -35,7 +35,7 @@ void main()
             break;
         case 2:
             if (top == -1)
-                printf("Underflow !! No Elements Left to Pop");
+                printf("Underflow !! No Elements Left to Pop\n");
             else
             {
                 top--;
@@ -46,6 +46,8 @@ void main()
         case 3:
             printf("\nPrinting Stack Elements......");
             printf("\nThe Size of the Stack is : %d", maxsize);
+            if (top == -1)
+                printf("\nEMPTY STACK!!!!!!!!!!!!!!!!!!!!!!!!!!");
             for (int i = top; i >= 0; i--){
                 printf("\n%d . Element is %d", i, astack[i]);
             }
