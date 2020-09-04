@@ -1,5 +1,5 @@
-package Java;
-
+package Java;       //Made by Spandan Ghosh
+                    //Available at github/spandu500/playground/Java/Salary.java
 import java.util.Scanner;
 
 public class Salary {
@@ -8,7 +8,7 @@ public class Salary {
         System.out.print("Enter the name of the employee : ");
         String empname = sc.nextLine();
         System.out.print("Enter the employee no : ");
-        int empno = sc.nextInt();
+        String empno = sc.nextLine();
         System.out.print("Enter the basic salary : ");
         Double sal = sc.nextDouble();
         double da = 0.70 * sal, hra = 0.30 * sal, pf = 0.10 * sal;
