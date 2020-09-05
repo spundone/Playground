@@ -1,5 +1,5 @@
 package Java;       //Made by Spandan Ghosh
-                    //Available at github.com/spandu500/playground/Java/Salary.java
+                    //Available at https://github.com/spandu500/Playground/tree/master/Java/Salary.java
 import java.util.Scanner;
 
 public class Salary {

@@ -1,5 +1,5 @@
 package Java;       //Made by Spandan Ghosh
-                    //Available at github.com/spandu500/playground/Java/InvertStar.java
+                    //Available at https://github.com/spandu500/Playground/tree/master/Java/InvertStar.java
 import java.util.Scanner;
 
 public class InvertStar {
