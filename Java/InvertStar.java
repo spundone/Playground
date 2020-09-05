@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 package Java; //Made by Spandan Ghosh
 
               //Available at github.com/spandu500/playground/Java/InvertStar.java
 
+=======
+package Java;       //Made by Spandan Ghosh
+                    //Available at https://github.com/spandu500/Playground/tree/master/Java/InvertStar.java
+>>>>>>> 51ba8dc7b4d76d0600a7c1bf90394bbec24c1ab0
 import java.util.Scanner;
 
 public class InvertStar {

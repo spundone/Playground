@@ -1,5 +1,5 @@
 package Java;       //Made by Spandan Ghosh
-                    //Available at github.com/spandu500/playground/Java/Salary.java
+                    //Available at https://github.com/spandu500/Playground/tree/master/Java/Salary.java
 import java.util.Scanner;
 
 public class Salary {
@@ -10,16 +10,16 @@ public class Salary {
         System.out.print("Enter the employee no : ");
         String empno = sc.nextLine();
         System.out.print("Enter the basic salary : ");
-        Double sal = sc.nextDouble();
-        double da = 0.70 * sal, hra = 0.30 * sal, pf = 0.10 * sal;
+        double bsal = sc.nextDouble();
+        double da = 0.70 * bsal, hra = 0.30 * bsal, pf = 0.10 * bsal;
         int cca = 240, pt = 100;
-        double gsal = sal + da + hra + cca + pt;
-        double nsal = gsal - pf;
-        System.out.println(" Name of the employee : " + empname);
-        System.out.println(" Employee number : " + empno);
-        System.out.println(" Basic salary    : " + sal);
-        System.out.println(" Gross salary    : " + gsal);
-        System.out.println(" Net salary      : " + nsal);
+        double gsal = bsal + da + hra + cca + pf + pt;
+        double nsal = gsal - (cca + pf + pt);
+        System.out.println("❶ Employee Name   : " + empname);
+        System.out.println("❷ Employee Number : " + empno);
+        System.out.println("❸ Basic Salary    : " + bsal);
+        System.out.println("❹ Gross Salary    : " + gsal);
+        System.out.println("❺ Net Salary      : " + nsal);
         sc.close();
     }
 }

@@ -1,5 +1,5 @@
-package Java;
-
+package Java;                               //Made by Spandan Ghosh
+                                            //Available at https://github.com/spandu500/Playground/tree/master/Java/Correlation.java
 import java.util.Scanner;
 
 public class Correlation {

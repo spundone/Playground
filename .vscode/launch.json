@@ -6,6 +6,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "CodeLens (Launch) - InvertStar",
             "request": "launch",
             "mainClass": "Java.InvertStar",
@@ -17,6 +18,12 @@
             "request": "launch",
             "mainClass": "Java.Salary",
             "projectName": "Playground_663e0d14"
+=======
+            "name": "CodeLens (Launch) - Salary",
+            "request": "launch",
+            "mainClass": "Java.Salary",
+            "projectName": "Playground_43441a16"
+>>>>>>> 51ba8dc7b4d76d0600a7c1bf90394bbec24c1ab0
         },
         {
             "type": "java",

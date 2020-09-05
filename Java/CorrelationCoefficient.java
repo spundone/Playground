@@ -1,5 +1,5 @@
-package Java;
-
+package Java;                               //Made by Spandan Ghosh
+                                            //Available at https://github.com/spandu500/Playground/tree/master/Java/CorrelationCoefficient.java
 class CorrelationCoefficient {
     public static void main(String args[]) {
         double r, nr = 0, dr_1 = 0, dr_2 = 0, dr_3 = 0, dr = 0;
