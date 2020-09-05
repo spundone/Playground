@@ -10,16 +10,16 @@ public class Salary {
         System.out.print("Enter the employee no : ");
         String empno = sc.nextLine();
         System.out.print("Enter the basic salary : ");
-        Double sal = sc.nextDouble();
-        double da = 0.70 * sal, hra = 0.30 * sal, pf = 0.10 * sal;
+        double bsal = sc.nextDouble();
+        double da = 0.70 * bsal, hra = 0.30 * bsal, pf = 0.10 * bsal;
         int cca = 240, pt = 100;
-        double gsal = sal + da + hra + cca + pt;
-        double nsal = gsal - pf;
-        System.out.println(" Name of the employee : " + empname);
-        System.out.println(" Employee number : " + empno);
-        System.out.println(" Basic salary    : " + sal);
-        System.out.println(" Gross salary    : " + gsal);
-        System.out.println(" Net salary      : " + nsal);
+        double gsal = bsal + da + hra + cca + pt;
+        double nsal = gsal - (cca + pf + pt);
+        System.out.println(" Employee Name   : " + empname);
+        System.out.println(" Employee Number : " + empno);
+        System.out.println(" Basic Salary    : " + bsal);
+        System.out.println(" Gross Salary    : " + gsal);
+        System.out.println(" Net Salary      : " + nsal);
         sc.close();
     }
 }
