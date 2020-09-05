@@ -15,11 +15,11 @@ public class Salary {
         int cca = 240, pt = 100;
         double gsal = bsal + da + hra + cca + pt;
         double nsal = gsal - (cca + pf + pt);
-        System.out.println(" Employee Name   : " + empname);
-        System.out.println(" Employee Number : " + empno);
-        System.out.println(" Basic Salary    : " + bsal);
-        System.out.println(" Gross Salary    : " + gsal);
-        System.out.println(" Net Salary      : " + nsal);
+        System.out.println("❶ Employee Name   : " + empname);
+        System.out.println("❷ Employee Number : " + empno);
+        System.out.println("❸ Basic Salary    : " + bsal);
+        System.out.println("❹ Gross Salary    : " + gsal);
+        System.out.println("❺ Net Salary      : " + nsal);
         sc.close();
     }
 }
