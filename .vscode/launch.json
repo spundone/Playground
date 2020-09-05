@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - InvertStar",
+            "request": "launch",
+            "mainClass": "Java.InvertStar",
+            "projectName": "Playground_663e0d14"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Salary",
+            "request": "launch",
+            "mainClass": "Java.Salary",
+            "projectName": "Playground_663e0d14"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - InfixToPostfix",
             "request": "launch",
             "mainClass": "Java.InfixToPostfix",
