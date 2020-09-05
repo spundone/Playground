@@ -10,7 +10,7 @@ public class Salary {
         System.out.print("Enter the employee no : ");
         int empno = sc.nextInt();
         System.out.print("Enter the basic salary : ");
-        Double sal = sc.nextDouble();
+        double sal = sc.nextDouble();
         double da = 0.70 * sal, hra = 0.30 * sal, pf = 0.10 * sal;
         int cca = 240, pt = 100;
         double gsal = sal + da + hra + cca + pt;

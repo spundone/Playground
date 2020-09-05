@@ -21,7 +21,7 @@ void main()
         {
         case 1:
             if (top == maxsize - 1)
-                printf("Overflow !! of elements please increase size of Stack\n");
+                printf("Overflow !! of elements please increase size of Stack\n");      // ToDo make func to increase size of array by copying same elements to a new array
             else
             {
                 printf("Enter Value to be Pushed : ");
