@@ -1,7 +1,7 @@
-package Java;
-
-import java.util.Scanner;               //MADLAD Edition FUNCTION Overloaded
-public class calc3 {
+package Java;                            //Made by Spandan Ghosh
+                                        //Available at https://github.com/spandu500/Playground/tree/master/Java/Calc3.java
+import java.util.Scanner;              //MADLAD Edition FUNCTION Overloaded
+public class Calc3 {
     double calc(double a)
     {
         System.out.println("Enter Second Number");
@@ -43,7 +43,7 @@ public class calc3 {
     {
         //int flag = 0;
         //char loption;
-        calc3 cx = new calc3();
+        Calc3 cx = new Calc3();
         Scanner s = new Scanner(System.in);
         //do{
         System.out.println("Welcome to Calc3 🤣");
