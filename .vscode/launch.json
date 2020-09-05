@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Salary",
+            "request": "launch",
+            "mainClass": "Java.Salary",
+            "projectName": "Playground_43441a16"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - InfixToPostfix",
             "request": "launch",
             "mainClass": "Java.InfixToPostfix",
