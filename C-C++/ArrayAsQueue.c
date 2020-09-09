@@ -10,10 +10,10 @@ void main()
     printf("\nEnter The Size of the Array : ");
     scanf("%d", &maxsize);
     int queue_array[maxsize];
-    printf("------------------------------------------------\n");
     int choice;
     while (1)
     {
+        printf("------------------------------------------------\n");
         printf("1.Insert element to queue \n");
         printf("2.Delete element from queue \n");
         printf("3.Display all elements of queue \n");
@@ -31,9 +31,9 @@ void main()
                     /*If queue is initially empty */
                         front = 0;
                     int add_item;
-                    printf("Inset the element in queue : ");
+                    printf("Insert the element in queue : ");
                     scanf("%d", &add_item);
-                    rear = rear + 1;
+                    rear++;
                     queue_array[rear] = add_item;
                 }
             break;
@@ -45,7 +45,7 @@ void main()
                 else
                 {   
                     printf("Element deleted from queue is : %d\n", queue_array[front]);
-                    front = front + 1;
+                    front++;
                 }
             break;
             case 3:
@@ -54,9 +54,10 @@ void main()
                 else
                 {
                     int i;
-                    printf("Queue is : \n");
+                    printf("The Size of the Queue is : %d\n", maxsize);
+                    printf("Queue is : ");
                     for (i = front; i <= rear; i++)
-                    printf("%d ", queue_array[i]);
+                        printf("%d ", queue_array[i]);
                     printf("\n");
                 }
             break;
