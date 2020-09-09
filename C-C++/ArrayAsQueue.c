@@ -13,7 +13,7 @@ void main()
     int choice;
     while (1)
     {
-        printf("------------------------------------------------\n");
+        printf("-----------------------------------------------\n");
         printf("1.Insert element to queue \n");
         printf("2.Delete element from queue \n");
         printf("3.Display all elements of queue \n");
