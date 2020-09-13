@@ -1,5 +1,7 @@
-package Java;       //Made by Spandan Ghosh
-                   //Available at https://github.com/spandu500/Playground/tree/master/Java/Bank.java
+package Java; //Made by Spandan Ghosh
+
+              //Available at https://github.com/spandu500/Playground/tree/master/Java/Bank.java
+
 import java.util.Scanner;
 
 public class Bank {
@@ -17,11 +19,11 @@ public class Bank {
         do {
             System.out.print("Enter Amount to Deposit :");
             depositAmount = sc.nextDouble();
-            if (depositAmount<0){
+            if (depositAmount < 0) {
                 System.out.println("Withdawal amount can't be negative!!");
                 continue;
             }
-            flag ++;
+            flag++;
         } while (flag == 0);
         Bank.balance += depositAmount;
         System.out.println("Amount Deposited...");
@@ -37,11 +39,11 @@ public class Bank {
         do {
             System.out.print("Enter Amount to Withdraw :");
             withdrawAmount = sc.nextDouble();
-            if (withdrawAmount<0){
+            if (withdrawAmount < 0) {
                 System.out.println("Withdawal amount can't be negative!!");
                 continue;
             }
-            if (withdrawAmount>Bank.balance){
+            if (withdrawAmount > Bank.balance) {
                 System.out.println("Withdawal amount can't be greater than " + Bank.balance);
                 continue;
             }
@@ -63,7 +65,7 @@ public class Bank {
         do {
             System.out.print("Enter the Time Period in Years : ");
             int timePeriod = sc.nextInt();
-            double compInt = (Bank.balance * (Math.pow((1 + Bank.interestRate / 100), timePeriod)))-Bank.balance;
+            double compInt = (Bank.balance * (Math.pow((1 + Bank.interestRate / 100), timePeriod))) - Bank.balance;
             System.out.println("The Compound Interest is : " + compInt);
             System.out.println(
                     "To confirm changes and add the interest ammount to balance Enter C, To Re-Enter no of months press any other key: ");
@@ -79,7 +81,7 @@ public class Bank {
     static void createAccount() {
         System.out.println(Bank.SEPERATOR);
         System.out.print("Enter your full name : ");
-        sc.nextLine();  //line seperator buffer
+        sc.nextLine(); // line seperator buffer
         Bank.name = sc.nextLine();
         System.out.println("Enter your Address Below...");
         Bank.address = sc.nextLine();
@@ -131,7 +133,7 @@ public class Bank {
                     break;
                 case 5:
                     System.out.println(Bank.SEPERATOR);
-                    if(Bank.name == null) {
+                    if (Bank.name == null) {
                         System.out.println("Account Not Initialized!!!");
                         continue;
                     }
