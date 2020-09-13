@@ -1,6 +1,6 @@
 package Java; //Made by Spandan Ghosh
 
-              //Available at https://github.com/spandu500/Playground/tree/master/Java/Bank.java
+//Available at https://github.com/spandu500/Playground/tree/master/Java/Bank.java
 
 import java.util.Scanner;
 
@@ -105,6 +105,17 @@ public class Bank {
         System.out.println(Bank.SEPERATOR);
     }
 
+    static void displayBalance() {
+        System.out.println(Bank.SEPERATOR);
+        System.out.println("Hello " + Bank.name);
+        System.out.println("Your Application No is " + Bank.appNumber);
+        System.out.println("Your Bank Balance is " + Bank.balance);
+        System.out.println("Your Registered Phone No is " + Bank.phone);
+        System.out.println("You Currently live at " + Bank.address);
+        System.out.println("Thank You For using Java Bank");
+        System.out.println(Bank.SEPERATOR);
+    }
+
     public static void main(final String[] args) {
         int flag = 0;
         do {
@@ -132,18 +143,11 @@ public class Bank {
                     Bank.computeInterest();
                     break;
                 case 5:
-                    System.out.println(Bank.SEPERATOR);
                     if (Bank.name == null) {
                         System.out.println("Account Not Initialized!!!");
                         continue;
                     }
-                    System.out.println("Hello " + Bank.name);
-                    System.out.println("Your Application No is " + Bank.appNumber);
-                    System.out.println("Your Bank Balance is " + Bank.balance);
-                    System.out.println("Your Registered Phone No is " + Bank.phone);
-                    System.out.println("You Currently live at " + Bank.address);
-                    System.out.println("Thank You For using Java Bank");
-                    System.out.println(Bank.SEPERATOR);
+                    Bank.displayBalance();
                     break;
                 default:
                     System.out.println("Error enter correct option");
