@@ -61,9 +61,9 @@ public class Bank {
         System.out.println("Interest Rate is : " + Bank.interestRate + "%");
         int flag = 0;
         do {
-            System.out.print("Enter the Time Period in months : ");
+            System.out.print("Enter the Time Period in Years : ");
             int timePeriod = sc.nextInt();
-            double compInt = Bank.balance * (Math.pow((1 + Bank.interestRate / 100), timePeriod));
+            double compInt = (Bank.balance * (Math.pow((1 + Bank.interestRate / 100), timePeriod)))-Bank.balance;
             System.out.println("The Compound Interest is : " + compInt);
             System.out.println(
                     "To confirm changes and add the interest ammount to balance Enter C, To Re-Enter no of months press any other key: ");
