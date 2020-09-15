@@ -1,5 +1,5 @@
-package Java;                               //Made by Spandan Ghosh
-                                            //Available at https://github.com/spandu500/Playground/tree/master/Java/Greatest.java
+package Java_Code;                           //Made by Spandan Ghosh
+                                            //Available at https://github.com/spandu500/Playground/tree/master/Java_Code/Greatest.java
 import java.util.Scanner;
 public class Greatest {
     public static void main(String[] args) {

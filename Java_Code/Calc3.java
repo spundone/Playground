@@ -1,5 +1,5 @@
-package Java;                            //Made by Spandan Ghosh
-                                        //Available at https://github.com/spandu500/Playground/tree/master/Java/Calc3.java
+package Java_Code;                       //Made by Spandan Ghosh
+                                        //Available at https://github.com/spandu500/Playground/tree/master/Java_Code/Calc3.java
 import java.util.Scanner;              //MADLAD Edition FUNCTION Overloaded
 public class Calc3 {
     double calc(double a)

@@ -1,11 +1,11 @@
-package Java;                            //Made by Spandan Ghosh
-import java.util.*;                     //Available at https://github.com/spandu500/Playground/tree/master/Java/Racer.java
+package Java_Code;                            //Made by Spandan Ghosh
+import java.util.*;                          //Available at https://github.com/spandu500/Playground/tree/master/Java_Code/Racer.java
 
 public class Racer {
     public static void main(String[] args)
     {
         Scanner s = new Scanner(System.in);
-        System.out.println("Enter the number of racers participating: ");
+        System.out.print("Enter the number of racers participating: ");
         int count = s.nextInt();
         int racers[] = new int[count];
         int sum = 0;
