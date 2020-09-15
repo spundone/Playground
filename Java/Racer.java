@@ -8,16 +8,19 @@ public class Racer {
         System.out.println("Enter the number of racers participating: ");
         int count = s.nextInt();
         int racers[] = new int[count];
+        int sum = 0;
         for (int i = 0; i < count; i++)
         {
             System.out.print("Enter Speed of participant " +(i+1)+" : ");
             racers[i]=s.nextInt();
-            if (racers[i]>10)
-                System.out.println("Qualified");
-            else
-                System.out.println("Unqualified");
+            sum+=racers[i];
         }
-        System.out.println("The Speed of racers are " + Arrays.toString(racers));
+        int average = sum/count;
+        System.out.println("Average Speed of racers is " + average);
+        for (int i=0; i < count; i++){
+            if (racers[i] > average)
+                System.out.println("Racer "+i+" Qualifies with a speed of " + average);
+        }
         s.close();
     }
 }
