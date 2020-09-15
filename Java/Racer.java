@@ -19,7 +19,7 @@ public class Racer {
         System.out.println("Average Speed of racers is " + average);
         for (int i=0; i < count; i++){
             if (racers[i] > average)
-                System.out.println("Racer "+i+" Qualifies with a speed of " + average);
+                System.out.println("Racer "+i+" Qualifies with a speed of " + racers[i]);
         }
         s.close();
     }
