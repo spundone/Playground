@@ -1,5 +1,5 @@
-package Java;                                           //Made by Spandan Ghosh
-                                                        //Available at https://github.com/spandu500/Playground/tree/master/Java/InfixToPostfix.java
+package Java_Code;                                           //Made by Spandan Ghosh
+                                                            //Available at https://github.com/spandu500/Playground/tree/master/Java_Code/InfixToPostfix.java
 import java.util.*;
 
 class InfixToPostfix {

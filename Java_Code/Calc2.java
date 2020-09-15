@@ -1,5 +1,5 @@
-package Java;                //Made by Spandan Ghosh
-                            //Available at https://github.com/spandu500/Playground/tree/master/Java/Calc2java
+package Java_Code;           //Made by Spandan Ghosh
+                            //Available at https://github.com/spandu500/Playground/tree/master/Java_Code/Calc2java
 import java.util.Scanner;  //Used Functions with parameters
 
 public class Calc2 {

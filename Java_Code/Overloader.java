@@ -1,5 +1,5 @@
-package Java;                               //Made by Spandan Ghosh
-import java.util.Scanner;                   //Available at https://github.com/spandu500/Playground/tree/master/Java/Overloader.java
+package Java_Code;                               //Made by Spandan Ghosh
+import java.util.Scanner;                       //Available at https://github.com/spandu500/Playground/tree/master/Java_Code/Overloader.java
 
 public class Overloader { 
   
