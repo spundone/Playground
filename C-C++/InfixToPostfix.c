@@ -1,168 +1,140 @@
-// C program to convert infix expression to postfix
 #include <stdio.h>
-#include <stdlib.h>
+#include <ctype.h>
 #include <string.h>
-
-// Stack type
-struct Stack
+#define N 20
+typedef struct
 {
     int top;
-    unsigned capacity;
-    int *array;
-};
-
-// Stack Operations
-struct Stack *createStack(unsigned capacity)
+    char a[N];
+}stack;
+void push (stack *s, int ele)
 {
-    struct Stack *stack = (struct Stack *)malloc(sizeof(struct Stack));
-
-    if (!stack)
-        return NULL;
-
-    stack->top = -1;
-    stack->capacity = capacity;
-
-    stack->array = (int *)malloc(stack->capacity * sizeof(int));
-
-    return stack;
-}
-int isEmpty(struct Stack *stack)
-{
-    return stack->top == -1;
-}
-char peek(struct Stack *stack)
-{
-    return stack->array[stack->top];
-}
-char pop(struct Stack *stack)
-{
-    if (!isEmpty(stack))
-        return stack->array[stack->top--];
-    return '$';
-}
-void push(struct Stack *stack, char op)
-{
-    stack->array[++stack->top] = op;
-}
-
-// A utility function to check if the given character is operand
-int isOperand(char ch)
-{
-    return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z');
-}
-
-// A utility function to return precedence of a given operator Higher returned value means higher precedence
-int Prec(char ch)
-{
-    if (ch == '+' || ch == '-')
-        return 1;
-    else if (ch == '*' || ch == '/')
-        return 1;
-    else if (ch == '^')
-        return 3;
-    else
-        return -1;
-}
-
-// The main function that converts given infix expression
-// to postfix expression.
-int infixToPostfix(char *exp)
-{
-    int i, k;
-
-    // Create a stack of capacity equal to expression size
-    struct Stack *stack = createStack(strlen(exp));
-    if (!stack) // See if stack was created successfully
-        return -1;
-
-    for (i = 0, k = -1; exp[i]; ++i)
-    {
-        // If the scanned character is an operand, add it to output.
-        if (isOperand(exp[i]))
-            exp[++k] = exp[i];
-
-        // If the scanned character is an ‘(‘, push it to the stack.
-        else if (exp[i] == '(')
-            push(stack, exp[i]);
-
-        // If the scanned character is an ‘)’, pop and output from the stack
-        // until an ‘(‘ is encountered.
-        else if (exp[i] == ')')
+    if(s->top==N-1)
         {
-            while (!isEmpty(stack) && peek(stack) != '(')
-                exp[++k] = pop(stack);
-            if (!isEmpty(stack) && peek(stack) != '(')
-                return -1; // invalid expression
-            else
-                pop(stack);
+            printf("Stack Overflow.\n");
         }
-        else // an operator is encountered
+    else
+    {
+        s->top++;
+        s->a[s->top]=ele;
+    }
+}
+char pop (stack *s)
+{
+    char x;
+    x=s->a[s->top];
+    s->top--;
+    return x;
+}
+int isempty(stack *s)
+{
+    if(s->top==-1)
+        return 1;
+    else 
+        return 0;
+}
+int isoperand(char x)
+{
+    if(x>='A' && x<='Z' || x>='a' && x<='z'|| x>='0' && x<='9')
+        return 1;
+    else
+        {return 0;}
+}
+int isoperator(char x)
+{
+    if(x=='+' || x=='-' || x=='*' || x=='/' || x=='^')
+        return 1;
+    else
+        {return 0;}
+}
+int priority(char x)
+{
+    if (x=='(' || x==')')
+        return 4;
+    else if (x=='^')
+        return 3;
+    else if (x=='*' || x=='/')
+        return 2;
+    else
+    {
+        return 1;
+    }    
+}
+char stacktop(stack *s)
+{
+    return(s->a[s->top]);
+}
+void convert(char infix[], char postfix[])
+{
+    stack s;
+    s.top = -1;
+    char x,ele;
+    int i,k=0;
+    for(i=0;i<strlen(infix);i++)
+    {
+        x=infix[i];
+        if(isoperand(x))
+           { postfix[k++]=x;}
+        else if(x=='(')
+          {  push(&s,x);}
+        else if(isoperator(x))
         {
-            while (!isEmpty(stack) && Prec(exp[i]) <= Prec(peek(stack)))
-                exp[++k] = pop(stack);
-            push(stack, exp[i]);
+            while(priority(x)<=priority(stacktop(&s)))
+            {
+                ele=pop(&s);
+                postfix[k++]=ele;
+            }
+            push(&s,x);
+        }
+        else     // x=')'
+        {
+            while(stacktop(&s)!='(')
+            {
+                ele=pop(&s);
+                postfix[k++]=ele;
+            }
+            ele=pop(&s);
         }
     }
-
-    // pop all the operators from the stack
-    while (!isEmpty(stack))
-        exp[++k] = pop(stack);
-
-    exp[++k] = '\0';
-    printf("The Postfix Expression is: %s", exp);
-}
-
-// The main function that returns value of a given postfix expression
-int evaluatePostfix(char *exp)
-{
-    // Create a stack of capacity equal to expression size
-    struct Stack *stack = createStack(strlen(exp));
-    int i;
-
-    // See if stack was created successfully
-    if (!stack)
-        return -1;
-
-    // Scan all characters one by one
-    for (i = 0; exp[i]; ++i)
+    while(isempty(&s)==0)
     {
-        // If the scanned character is an operand (number here),
-        // push it to the stack.
-        if (isdigit(exp[i]))
-            push(stack, exp[i] - '0');
-
-        // If the scanned character is an operator, pop two
-        // elements from stack apply the operator
+        ele=pop(&s);
+        postfix[k++]=ele;
+    }
+    postfix[k]='\0';
+}
+int main()
+{
+    char infix[20], postfix[20],x;
+    int a,b,c,i;
+    stack s;
+    s.top=-1;
+    printf("Enter infix expression.\n");
+    gets(infix);
+    convert(infix,postfix);
+    printf("\nPostfix expression = %s",postfix);
+    for(i=0;i<strlen(postfix);i++)
+    {
+         x=postfix[i];
+        if(isdigit(x))
+            push(&s, (int)x-'0');
         else
         {
-            int val1 = pop(stack);
-            int val2 = pop(stack);
-            switch (exp[i])
+            a=pop(&s);
+            b=pop(&s);
+            if(x=='+')
+                c=b+a;
+            else if(x=='-') 
+                c=b-a;
+            else if(x=='*')
+                c=b*a;
+            else
             {
-            case '+':
-                push(stack, val2 + val1);
-                break;
-            case '-':
-                push(stack, val2 - val1);
-                break;
-            case '*':
-                push(stack, val2 * val1);
-                break;
-            case '/':
-                push(stack, val2 / val1);
-                break;
+                c=b/a;
             }
+            push(&s,c);
         }
     }
-    return pop(stack);
-}
-
-// Driver program to test above functions
-void main()
-{
-    printf("\nEnter the Actual Infix Expression: ");
-    char inexp[100];
-    gets(inexp);
-    infixToPostfix(inexp);
-    printf("\nThe Evaluation Value of the Postfix expression is: %d", evaluatePostfix(inexp));
+    printf("\n Postfix evaluation = %d",pop(&s));
+    return 0;
 }
