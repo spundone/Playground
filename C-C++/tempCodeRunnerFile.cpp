@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+ 
 int add(int x, int y)
 {
     return x + y;
@@ -28,18 +28,18 @@ int mod(int x, int y)
 int main()
 {
     int x;
-    cout << "Enter a number: ";
-    cin >> x;
+    std::cout << "Enter a number: ";
+    std::cin >> x;
  
     int y;
-    cout << "Enter another number: ";
-    cin >> y;
+    std::cout << "Enter another number: ";
+    std::cin >> y;
  
     int op;
     do
     {
-        cout << "Enter an operation (1=add, 2=subtract, 3=multiply, 4=divide, 5=remainder): ";
-        cin >> op;
+        std::cout << "Enter an operation (1=add, 2=subtract, 3=multiply, 4=divide, 5=remainder): ";
+        std::cin >> op;
     } while (op < 1 || op > 5);
  
     // Create a function pointer named ans (yes, the syntax is ugly)
