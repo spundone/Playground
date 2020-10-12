@@ -1,64 +1,116 @@
 #include <stdio.h>
-#include <stdlib.h>
-
-void main()
+#define N 20
+typedef struct stack
 {
-    int maxsize = 0;
-    int option = 0, top = -1;
-    printf("*********ARRAY IMPLEMENTATION OF STACK*********");
-    printf("\nEnter The Size of the Array : ");
-    scanf("%d", &maxsize);
-    printf("------------------------------------------------");
-    int astack[maxsize];
-    while (option != 4)
+    int a[N];
+    int top;
+}stack;
+void push(stack *s, int ele)
+{
+    if(s->top==N-1)
     {
-        printf("\nChoose one of the following options");
-        printf("\n1.Push Element\n2.Pop Element\n3.Show the Stack\n4.Exit");
-        printf("\n------------------------------------------------");
-        printf("\nEnter Your Choice: ");
-        scanf("%d", &option);
-        switch (option)
+        printf("\nStack Overflow.\n");
+    }
+    else
+    {
+        s->top++;
+        s->a[s->top]=ele;
+    }
+}
+int isempty(stack *s)
+{
+    if(s->top==-1)
+        return 1;
+    else
+    {
+        return 0;
+    }  
+}
+int stacktop(stack *s)
+{
+    if(isempty(s))
+        return 1;
+    else
+    {
+        return s->a[s->top];
+    }
+}
+int pop(stack *s)
+{
+    int x;
+    if(isempty(s))
+        return -1;
+    else
+    {
+        x=s->a[s->top];
+        s->top--;
+        return x;
+    }
+}
+void display(stack *s)
+{
+    int i;
+    if(isempty(s))
+        printf("\nStack is empty.\n");
+    else
+    {
+        for(i=s->top;i>=0;i--)
         {
-        case 1:
-            if (top == maxsize - 1)
-                printf("Overflow !! of elements please increase size of Stack\n");
-            else
-            {
-                printf("Enter Value to be Pushed : ");
-                int val;
-                scanf("%d", &val);
-                top++;
-                astack[top] = val;
-                printf("\nItem Pushed on Top: ");
-                printf("\n------------------------------------------------");
-            }
-            break;
-        case 2:
-            if (top == -1)
-                printf("Underflow !! No Elements Left to Pop\n");
-            else
-            {
-                top--;
-                printf("Items Popped from Top");
-                printf("\n------------------------------------------------");
-            }
-            break;
-        case 3:
-            printf("\nPrinting Stack Elements......");
-            printf("\nThe Size of the Stack is : %d", maxsize);
-            if (top == -1)
-                printf("\nEMPTY STACK!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            for (int i = top; i >= 0; i--){
-                printf("\n%d . Element is %d", i, astack[i]);
-            }
-            printf("\n------------------------------------------------");
-            break;
-        case 4:
-            printf("Exiting....");
-            exit(0);
-            break;
-        default:
-            printf("Please Enter a Valid Choice");
+            printf("%d\t",s->a[i]);
         }
     }
+}
+int main()
+{
+    int ch,ele;
+    stack s;
+    s.top== -1;
+    while(1)
+    {
+        printf("\n1.Push\n2.Pop\n3.Stacktop\n4.Display\n5.Exit\n");
+        printf("Enter Choice.\n");
+        scanf("%d",&ch);
+        if(ch==5)
+            break;
+        switch(ch)
+        {
+            case 1:
+            {
+                printf("Enter element to be pushed.\n");
+                scanf("%d",&ele);
+                push(&s,ele);
+            }
+            break;
+            case 2:
+            {
+                ele=pop(&s);
+                if(ele==-1)
+                    printf("\nStack underflow.\n");
+                else
+                {
+                    printf("\nElement popped=%d\n",ele);
+                }
+            }
+            break;
+            case 3:
+            {
+                stacktop(&s);
+                if(ele==-1)
+                    printf("Stack is Empty.\n");
+                else
+                {
+                    printf("Stacktop element = %d\n",ele);
+                }
+            }
+            break;
+            case 4:
+            {
+                display(&s);
+            }
+            break; 
+            default:
+                printf("\nInvalid Choice.\n");
+        }
+    }
+    return 0;
 }
