@@ -10,7 +10,7 @@ public class VectorFrequency {
             String QuickInitialize[] = { "Parth", "Harsh", "Yash", "Ajay", "John", "Bob", "Doe", "Suyog", "Mitesh",
                     "Babylon", "Pastak", "Ruhez", "Harambe", "Aezakmi", "Priyanka", "Shardul", "Supriya", "Deore",
                     "Pastak", "Abhishek", "Bansal", "Momo", "Bob", "Doe", "Parth", "Harsh", "Yash", "Ajay", "John",
-                    "Bob", "Doe" };
+                    "Bob", "Doe", "Midoria", "Ajay", "John", "Kaguya", "Parth", "Marques", "Ken", "Austin" };
             v.addAll(Arrays.asList(QuickInitialize));
             System.out.println("Initialized successfully");
             stats(v);
@@ -26,13 +26,14 @@ public class VectorFrequency {
                 flag1 = input.next();
             } while (flag1.equalsIgnoreCase("Y"));
         }
-        if (v.isEmpty()){
+        if (v.isEmpty()) {
             System.out.println("Empty Vector!");
             initialize();
+        } else {
+            System.out.print("Enter an element you want to search: ");
+            String searchStr = input.next();
+            search(v, searchStr);
         }
-        System.out.print("Enter an element you want to search: ");
-        String searchStr = input.next();
-        search(v, searchStr);
     }
 
     static void search(Vector<String> vs, String s) {
@@ -52,22 +53,20 @@ public class VectorFrequency {
             if (flag2.equalsIgnoreCase("Y")) {
                 for (int i = 0; i < location.size(); i++) {
                     int x = location.get(i);
-                    vs.remove(x);
-                    System.out.println("Element removed from " + x + " successfully");  
+                    vs.remove(x - i);
+                    System.out.println("Element removed from " + x + " successfully");
                 }
                 stats(vs);
             } else {
                 System.out.println("Ignored Elements");
             }
-        }
-        if (counter == 0) {
+        } else if (counter == 0) {
             System.out.println("Element not found. Do you want to add " + s + " to the vector? (Y/N)");
             String flag2 = input.next();
             if (flag2.equalsIgnoreCase("Y")) {
                 vs.add(s);
                 System.out.println("Element added successfully");
                 stats(vs);
-
             }
         }
     }
