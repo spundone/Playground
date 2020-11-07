@@ -1,5 +1,8 @@
 C-C++/*.exe
 .vscode/settings.json
 Java_Code/*.class
+<<<<<<< HEAD
 Java_Code/tempCodeRunnerFile.*
+=======
+>>>>>>> 16422e9bf91bdbdb22e1e9732330ce8c6cee60ea
 tempCodeRunnerFile.*
